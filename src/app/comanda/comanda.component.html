@@ -1,0 +1,14 @@
+<div class="comanda-container">
+  <h2>Comanda</h2>
+
+  <ul class="comanda">
+    <li *ngFor="let item of comandaService.itens; let i = index" class="item">
+      <div>
+        <span>{{ item.nome }} X{{ item.quantidade }}</span>
+      </div>
+      <button (click)="removerItem(i)" class="remover-btn">Remover</button>
+    </li>
+  </ul>
+  <div class="total">Total: R$ {{ comandaService.precoTotal.toFixed(2) }}</div>
+  <button (click)="enviarPedido()" class="enviar-btn">Enviar</button>
+</div>

@@ -1,0 +1,102 @@
+/* Estilos gerais da comanda */
+.comanda {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+h2 {
+  font-family: 'Brasika Display - Trial', sans-serif;
+  font-size: 28px;
+  color: black;
+}
+
+.item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+  padding: 10px;
+}
+
+.item button {
+  background-color: #8d0018;
+  border: none;
+  color: white;
+  padding: 8px 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  margin: 4px 2px;
+  cursor: pointer;
+  transition-duration: 0.4s;
+  border-radius: 8px;
+}
+
+.item button:hover {
+  background-color: #700202;
+}
+
+.total {
+  font-weight: bold;
+  margin-top: 20px;
+  text-align: right;
+}
+
+.comanda-container {
+  position: fixed;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  background-color: #fffefe71;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-height: 80vh;
+  overflow-y: auto;
+  width: 370px; /* Ajuste a largura conforme desejado */
+}
+
+.enviar-btn {
+  background-color: rgb(165, 22, 0);
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: auto; /* Empurra o botão para a parte inferior do container */
+  align-self: center; /* Alinha o botão no meio verticalmente */
+}
+
+.enviar-btn:hover {
+  background-color: #1a2b11d8;
+}
+
+/* Media query para dispositivos móveis */
+@media (max-width: 768px) {
+  .comanda-container {
+    position: fixed; /* Mantém a comanda fixa */
+    bottom: 0; /* Fixa na parte inferior */
+    width: 100%; /* Ajusta a largura para ocupar toda a tela */
+    left: 0; /* Ajusta a posição para alinhar à esquerda */
+    margin: 0; /* Remove margens */
+    transform: none; /* Remove a transformação */
+    max-height: 25vh; /* Define a altura máxima para 25% da tela */
+    margin-top: 160px;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra superior */
+    background-color: #fffefe71; /* Mantém o fundo semi-transparente */
+    z-index: 1000; /* Garante que o elemento fique sobre outros */
+    overflow-y: auto; /* Permite rolagem interna se necessário */
+  }
+
+  .comanda {
+    padding-bottom: 10px; /* Adiciona espaço inferior para rolar */
+  }
+}

@@ -1,0 +1,105 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.cozinha-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  background-image: url('/assets/fundo_cozinha2.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+}
+
+.background-filter {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(46, 0, 19, 0.603); /* Cor vermelha com 70% de opacidade */
+
+}
+
+.cozinha-container h2,
+.info-box,
+.item-cozinha {
+  position: relative; /* Mantém esses elementos na frente do fundo */
+  z-index: 1; /* Garante que estejam na frente do filtro */
+}
+
+.cozinha-container h2 {
+  text-align: center;
+  font-family: 'Brasika Display - Trial', sans-serif;
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+.info-box {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 80%;
+  max-width: 400px;
+  margin-bottom: 250px;
+}
+
+h2{
+  color: #ecb385;
+}
+.info-box p {
+  margin: 10px 0;
+  font-family: 'Rubik', sans-serif;
+}
+
+.separator {
+  border: 0;
+  border-top: 1px solid #919090;
+  margin: 10px 0;
+}
+
+.itens-cozinha {
+  list-style: none;
+  padding: 0;
+}
+
+.item-cozinha div {
+  font-family: 'Rubik', sans-serif;
+  font-size: 18px;
+}
+
+.item-nome {
+  font-family: 'Rubik', sans-serif;
+  font-size: 20px;
+}
+
+.finalizar-button {
+  display: block;
+  margin: 0 auto; /* Centraliza horizontalmente */
+  margin-bottom: -15px;
+  margin-top: 20px; /* Adiciona um espaço entre o botão e os itens */
+  padding: 8px 15px; /* Ajusta o padding para aumentar o tamanho */
+  max-width: 300px; /* Define uma largura máxima para o botão */
+  background-color: rgb(44, 63, 33);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: 'Rubik', sans-serif;
+  transition: background-color 0.3s;
+}
+
+.finalizar-button:hover {
+  background-color: #1b4d00d8;
+}

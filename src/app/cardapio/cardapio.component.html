@@ -1,0 +1,112 @@
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Oswald:wght@200..700&family=Rubik&family=Secular+One&display=swap" rel="stylesheet">
+  <link href="https://fonts.cdnfonts.com/css/brasika-display-trial" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+
+
+<div class="cardapio">
+<div class="cliente-container">
+
+  <div align="left">
+    <h2>Cliente:</h2>
+    <p><strong>Nome: </strong>{{ nome }}</p>
+    <p><strong>Telefone:</strong> {{ telefone }}</p>
+    <p><strong>Número da Mesa:</strong> {{ numMesa }}</p>
+  </div>
+</div>
+</div>
+  <app-menu></app-menu>
+
+<div class="cardapio">
+
+  <!-- Lista de Pratos -->
+  <h3 id="pratos">Pratos</h3>
+  <ul class="lista-pratos">
+    <li *ngFor="let prato of pratos" class="prato">
+      <div class="item-container">
+        <div class="item-info">
+          <div class="item-wrapper">
+            <img [src]="prato.imagem" alt="{{ prato.nome }}" class="item-imagem">
+            <div class="item-text">
+              <h4>{{ prato.nome }}</h4>
+              <p>{{ prato.descricao }}</p>
+              <p>Preço: R$ {{ prato.preco.toFixed(2) }}</p>
+              <button (click)="adicionarItem(prato)">Adicionar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </li>
+  </ul>
+
+  <!-- Lista de Bebidas -->
+  <h3 id="bebidas">Bebidas</h3>
+<ul class="lista-bebidas">
+  <li *ngFor="let bebida of bebidas" class="bebida">
+    <div class="item-container">
+      <div class="item-info">
+        <div class="item-wrapper">
+          <img [src]="bebida.imagem" alt="{{ bebida.nome }}" class="item-imagem">
+          <div class="item-text">
+            <h4>{{ bebida.nome }}</h4>
+            <p>{{ bebida.descricao }}</p>
+            <p>Preço: R$ {{ bebida.preco.toFixed(2) }}</p>
+
+            <!-- Checkboxes para sabores de suco e refrigerante -->
+            <div class="sabores" *ngIf="bebida.nome === 'Sucos' || bebida.nome === 'Refrigerantes'">
+              <div *ngFor="let sabor of bebida.sabores">
+                <input type="checkbox" [value]="sabor" (change)="onSaborChange(bebida, $event)"> {{ sabor }}
+              </div>
+            </div>
+
+            <button (click)="adicionarItem(bebida)">Adicionar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </li>
+</ul>
+
+<!-- Lista de Drinks -->
+<h3 id="drinks">Drinks</h3>
+<ul class="lista-drinks">
+  <li *ngFor="let drink of drinks" class="drink">
+    <div class="item-container">
+      <div class="item-info">
+        <div class="item-wrapper">
+          <img [src]="drink.imagem" alt="{{ drink.nome }}" class="item-imagem">
+          <div class="item-text">
+            <h4>{{ drink.nome }}</h4>
+            <p>{{ drink.descricao }}</p>
+            <p>Preço: R$ {{ drink.preco.toFixed(2) }}</p>
+            <button (click)="adicionarItem(drink)">Adicionar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </li>
+</ul>
+
+<!-- Lista de Sobremesas -->
+<h3 id="sobremesas">Sobremesas</h3>
+<ul class="lista-sobremesas">
+  <li *ngFor="let sobremesa of sobremesas" class="sobremesa">
+    <div class="item-container">
+      <div class="item-info">
+        <div class="item-wrapper">
+          <img [src]="sobremesa.imagem" alt="{{ sobremesa.nome }}" class="item-imagem">
+          <div class="item-text">
+            <h4>{{ sobremesa.nome }}</h4>
+            <p>{{ sobremesa.descricao }}</p>
+            <p>Preço: R$ {{ sobremesa.preco.toFixed(2) }}</p>
+            <button (click)="adicionarItem(sobremesa)">Adicionar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </li>
+</ul>
+
+<app-comanda></app-comanda>

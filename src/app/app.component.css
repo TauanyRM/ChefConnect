@@ -1,0 +1,9 @@
+/* styles.css ou styles.scss */
+
+/* No arquivo de estilo do componente AppComponent (app.component.css ou app.component.scss) */
+
+h1 {
+  font-family: "Oswald", sans-serif;
+  font-weight: 400/* Aplicando a fonte Secular One ao h1 */
+}
+

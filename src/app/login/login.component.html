@@ -1,0 +1,60 @@
+<link href="https://fonts.cdnfonts.com/css/brasika-display-trial" rel="stylesheet">
+link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+<div class="background">
+  <div class="container">
+    <div class="heading">Bem vindo ao Cardapio Digital!</div>
+    <form [formGroup]="loginForm" (ngSubmit)="login()">
+      <div class="mb-3">
+
+        <input
+          type="text"
+          class="form-control form-control-sm input"
+          id="inputName"
+          formControlName="name"
+          required
+          placeholder="Nome completo">
+        <div *ngIf="nameControl && nameControl.invalid && (nameControl.dirty || nameControl.touched)">
+          <div *ngIf="nameControl.errors?.['required']">Nome é obrigatório.</div>
+          <div *ngIf="nameControl.errors?.['pattern']">Nome deve conter apenas letras.</div>
+          <div *ngIf="nameControl.errors?.['minlength']">Nome deve ter no mínimo 3 caracteres.</div>
+          <div *ngIf="nameControl.errors?.['maxlength']">Nome deve ter no máximo 50 caracteres.</div>
+        </div>
+      </div>
+
+      <div class="mb-3">
+
+        <input
+          type="text"
+          class="form-control form-control-sm input"
+          id="inputPhone"
+          formControlName="phone"
+          required
+          placeholder="Fone: (XX)XXXXXXXXX">
+        <div *ngIf="phoneControl && phoneControl.invalid && (phoneControl.dirty || phoneControl.touched)">
+          <div *ngIf="phoneControl.errors?.['required']">Celular é obrigatório.</div>
+          <div *ngIf="phoneControl.errors?.['pattern']">DDD + Celular.</div>
+        </div>
+      </div>
+
+      <div class="mb-3">
+  
+        <input
+          type="number"
+          class="form-control form-control-sm input"
+          id="inputNumber"
+          formControlName="numMesa"
+          required
+          placeholder="Número da Mesa">
+        <div *ngIf="numMesaControl && numMesaControl.invalid && (numMesaControl.dirty || numMesaControl.touched)">
+          <div *ngIf="numMesaControl.errors?.['required']">Número da Mesa é obrigatório.</div>
+        </div>
+      </div>
+
+      <button type="submit" class="btn btn-primary login-button" [disabled]="loginForm.invalid">Acessar</button>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,133 @@
+.cardapio {
+  display: flex;
+  flex-direction: column;
+  background-size: cover;
+  width: 100%;
+
+  background-image: url('/assets/card5.jpg');
+
+}
+
+
+.cliente-container {
+  background-color: white;
+  padding: 5px; /* Diminui o padding */
+  margin-top: 15px; /* Diminui a margem superior */
+  margin-left: 15px; /* Diminui a margem esquerda */
+  padding-bottom: 0px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 10px; /* Diminui a margem inferior */
+  font-family: 'Rubik', sans-serif;
+  font-style: normal;
+  max-width: 300px; /* Define a largura máxima desejada */
+}
+
+h2{
+  font-family: 'Brasika Display - Trial', sans-serif;
+  color: black;
+  font-size: 25px;
+
+
+}
+
+h3{
+  margin-left: 25px;
+  font-family: 'Brasika Display - Trial', sans-serif;
+  color:#ecb385;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+h1 {
+  font-family: 'Brasika Display - Trial', sans-serif;
+  font-size: 40px;
+  color: rgb(15, 0, 0);
+  font-weight: 400;
+}
+
+
+.lista-pratos,
+.lista-bebidas,
+.lista-drinks,
+.lista-sobremesas {
+  list-style-type: none;
+  margin-left: -60px;
+
+}
+
+.item-container {
+  margin-bottom: 20px; /* Adiciona espaçamento entre os itens */
+
+}
+
+.item-info {
+  background-color: white;
+  padding: 8px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+}
+
+.item-wrapper {
+  display: flex;
+  align-items: flex-start;
+}
+
+.item-imagem {
+  max-height: 165px; /* Defina a altura máxima desejada para a imagem */
+  width: auto; /* Permite que a largura seja ajustada automaticamente */
+  border-radius: 10px;
+  margin-right: 20px; /* Adicione margem à direita para separar a imagem das informações */
+  margin-top: 20px;
+  margin-left: 5px;
+}
+
+.item-text {
+  flex: 1; /* Faz com que o texto ocupe o espaço restante */
+}
+
+.item-text h4,
+.item-text p {
+  margin-top: 0; /* Remova a margem superior padrão */
+}
+
+button {
+ 
+  background-color: rgb(165, 22, 0);
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #1a2b11d8;
+}
+
+
+@media (min-width: 768px) {
+  .item-info {
+    margin-left: 580px;
+    max-width: calc(70% - 250px - 200px);
+    margin-left: 50px;
+  }
+
+  .item-text .sabores {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; /* Adiciona um espaço entre os checkboxes */
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  /* Espaçamento entre checkboxes e botão Adicionar */
+  .item-text .sabores div {
+    margin-bottom: 0; /* Remove a margem inferior */
+  }
+
+
+
+}

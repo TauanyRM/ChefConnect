@@ -1,0 +1,26 @@
+nav {
+  background-color: #f7eeee; /* Cor de fundo */
+  padding: 15px; /* Espaçamento interno */
+  display: flex; /* Para os itens ficarem em linha */
+  justify-content: space-around; /* Para distribuir os itens igualmente na barra */
+}
+
+nav a {
+  text-decoration: none; /* Remover sublinhado dos links */
+  color: #333333; /* Cor do texto */
+  font-weight: bold; /* Negrito */
+  font-size: 17px; /* Tamanho da fonte */
+  transition: color 0.3s; /* Transição suave da cor */
+  font-family: 'Rubik', sans-serif;
+}
+
+nav a:hover {
+  color: #9b010e; /* Cor do texto ao passar o mouse */
+}
+
+.fixed-menu {
+  position: sticky;
+  top: 0;
+  background-color: #ececec62; /* Adicione a cor de fundo desejada para o menu fixo */
+  z-index: 1000; /* Certifique-se de que o menu fixo esteja acima de outros elementos */
+}

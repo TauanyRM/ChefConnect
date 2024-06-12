@@ -1,0 +1,7 @@
+/* No arquivo de estilo global do seu projeto (styles.css ou styles.scss) */
+
+.cardapio h3,
+.cardapio .item-info,
+.cardapio button {
+  font-family: 'Rubik', sans-serif; /* Aplica a fonte Rubik nos títulos, textos dos itens e botões */
+}

@@ -1,0 +1,13 @@
+<!-- menu.component.html -->
+<head>
+  <!-- Adicione o link para a fonte desejada -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Rubik&family=Secular+One&display=swap">
+</head>
+<!-- menu.component.html -->
+<nav [class.fixed-menu]="isMenuFixed">
+  <a (click)="scrollToSection('pratos')">Pratos</a>
+  <a (click)="scrollToSection('bebidas')">Bebidas</a>
+  <a (click)="scrollToSection('drinks')">Drinks</a>
+  <a (click)="scrollToSection('sobremesas')">Sobremesas</a>
+</nav>
+<div #placeholder id="placeholder"></div>

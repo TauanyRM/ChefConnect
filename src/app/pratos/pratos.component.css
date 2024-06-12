@@ -1,0 +1,38 @@
+/* Estilos para os pratos */
+.prato {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    padding: 10px;
+  }
+  
+  .prato img {
+    max-width: 100px;
+    margin-right: 20px;
+  }
+  
+  .prato h3 {
+    margin: 0;
+  }
+  
+  .prato button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 4px 2px;
+    cursor: pointer;
+    transition-duration: 0.4s;
+    border-radius: 8px;
+  }
+  
+  .prato button:hover {
+    background-color: #3e8e41;
+  }
+  
